@@ -11,10 +11,11 @@ const flash = require("connect-flash");
 const errorController = require("./controllers/error");
 const User = require("./models/user");
 
-const MONGODB_URI =
-  "mongodb+srv://aythejuggernaut:beginnerproject@cluster0.eoqgq2e.mongodb.net/shop?retryWrites=true&w=majority";
-
 const app = express();
+require("dotenv").config();
+
+const MONGODB_URI = process.env.MONGODB_URI;
+
 const store = new MongoDBStore({
   uri: MONGODB_URI,
   collection: "sessions",

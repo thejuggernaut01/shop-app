@@ -217,7 +217,7 @@ exports.postNewPassword = (req, res, next) => {
     })
     .then((hashedPassword) => {
       resetUser.password = hashedPassword;
-      resetUser.token = undefined;
+      resetUser.resetToken = undefined;
       resetUser.resetTokenExpiration = undefined;
 
       return resetUser.save();
