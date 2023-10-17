@@ -126,7 +126,6 @@ exports.postEditProduct = (req, res, next) => {
       product: {
         updatedTitle,
         updatedPrice,
-
         updatedDesc,
         _id: prodId,
       },
