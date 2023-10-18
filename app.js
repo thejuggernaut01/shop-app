@@ -118,7 +118,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(MONGODB_URI)
-  .then((result) => {
+  .then(() => {
     app.listen(3030);
   })
   .catch((err) => {
